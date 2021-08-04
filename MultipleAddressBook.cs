@@ -8,20 +8,36 @@ namespace AddressbookProgram
     {
 
 
-        
+         public List<Contact> contactlist = new List<Contact>();
+        string addressBookName;
 
-        private List<Contact> objcontact;
+
         //Address book dictioanry to store a value(list of contacts) corresponding to keyname
         private static Dictionary<string, List<Contact>> AddressBookDictionary = new Dictionary<string, List<Contact>>();
         public void AddMember()
         {
-            string addressBookName;
-            objcontact = new List<Contact>();
+       
+            
             while (true)
             {
                 Console.WriteLine("Enter The Name of the Address Book");
-                addressBookName = Console.ReadLine();
+                try
+                {
+                    addressBookName = Console.ReadLine();
+                    if (addressBookName.Length == 0)
+                    {
+                        throw new Exception();
+                    }
+                }
+                catch(Exception)
+                {
+                    Console.WriteLine("name cannot be blank");
+                    Environment.Exit(0);
+                }
                
+                
+
+
                 if (AddressBookDictionary.Count > 0)
                 {
                     if (AddressBookDictionary.ContainsKey(addressBookName)) //validation for duplicatename
@@ -91,13 +107,13 @@ namespace AddressbookProgram
                     }
                 }
                 //
-                objcontact.Add(obj);
+                contactlist.Add(obj);
                 Console.WriteLine("***************************************");
 
                 numOfContacts--;
             }
             //adding into address book dictionary
-            AddressBookDictionary.Add(addressBookName, objcontact);
+            AddressBookDictionary.Add(addressBookName, contactlist);
             Console.WriteLine("**************Successfully Added****************");
         }
 
@@ -141,12 +157,12 @@ namespace AddressbookProgram
         public void EditDetails()
         {
             int f;//flag variable
-            if (objcontact.Count > 0)
+            if (contactlist.Count > 0)
             {
                 Console.Write("Enter name of a person you want to edit: ");
                 string editName = Console.ReadLine();
 
-                foreach (var x in objcontact)
+                foreach (var x in contactlist)
                 {
                     if (editName.ToLower() == x.FirstName.ToLower())
                     {
@@ -252,19 +268,19 @@ namespace AddressbookProgram
         public void DeleteDetails()
         {
             int f = 0;
-            if (objcontact.Count > 0)
+            if (contactlist.Count > 0)
             {
                 Console.Write("Enter name of a person you want to Delete: ");
                 string deleteName = Console.ReadLine();
 
-                foreach (var x in objcontact)
+                foreach (var x in contactlist)
                 {
                     if (deleteName.ToLower() == x.FirstName.ToLower())
                     {
                         //removing from list
                         Console.WriteLine("***************DELETED****************");
                         Console.WriteLine($"You have deleted {x.FirstName} contact");
-                        objcontact.Remove(x);
+                        contactlist.Remove(x);
                         f = 1;
                         break;
                     }
