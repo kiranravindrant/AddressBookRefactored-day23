@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AddressbookProgram
@@ -60,11 +61,45 @@ namespace AddressbookProgram
             int numOfContacts = Convert.ToInt32(Console.ReadLine());
             while (numOfContacts > 0)
             {
-                //object for contact class
+                //object for contact class                                                                 
                 Contact obj = new Contact();
 
+
+            repeat:
                 Console.Write("Enter First Name: ");
-                obj.FirstName = Console.ReadLine();
+
+
+
+                if (contactlist.Count > 0)
+                {
+                    string name = Console.ReadLine();
+                    try
+                    {
+                        Contact duplicatecheck = contactlist.Find(obj => obj.FirstName == name);    //lambda expression added
+
+                        if (duplicatecheck.Equals(null))
+                        {
+                        throw new Exception();
+                        obj.FirstName = name;
+                    }
+                        else 
+                        {
+                            Console.WriteLine("Duplicate Name Found");
+                            goto repeat;
+                        }
+                    }
+                   catch (Exception)
+                    {
+                        obj.FirstName = name;
+                    }
+
+
+                                            }    
+                else
+                {
+                    obj.FirstName = Console.ReadLine();
+                }
+
                 Console.Write("Enter Last Name: ");
                 obj.LastName = Console.ReadLine();
                 Console.Write("Enter Address: ");
