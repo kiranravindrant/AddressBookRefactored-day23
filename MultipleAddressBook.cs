@@ -9,7 +9,7 @@ namespace AddressbookProgram
     {
 
 
-         public List<Contact> contactlist = new List<Contact>();
+        public List<Contact> contactlist = new List<Contact>();
         string addressBookName;
 
 
@@ -17,8 +17,8 @@ namespace AddressbookProgram
         private static Dictionary<string, List<Contact>> AddressBookDictionary = new Dictionary<string, List<Contact>>();
         public void AddMember()
         {
-       
-            
+
+
             while (true)
             {
                 Console.WriteLine("Enter The Name of the Address Book");
@@ -30,13 +30,13 @@ namespace AddressbookProgram
                         throw new Exception();
                     }
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     Console.WriteLine("name cannot be blank");
                     Environment.Exit(0);
                 }
-               
-                
+
+
 
 
                 if (AddressBookDictionary.Count > 0)
@@ -79,22 +79,22 @@ namespace AddressbookProgram
 
                         if (duplicatecheck.Equals(null))
                         {
-                        throw new Exception();
-                       
-                    }
-                        else 
+                            throw new Exception();
+
+                        }
+                        else
                         {
                             Console.WriteLine("Duplicate Name Found");
                             goto repeat;
                         }
                     }
-                   catch (Exception)
+                    catch (Exception)
                     {
                         obj.FirstName = name;
                     }
 
 
-                                            }    
+                }
                 else
                 {
                     obj.FirstName = Console.ReadLine();
@@ -196,11 +196,11 @@ namespace AddressbookProgram
             {
                 Console.Write("Enter name of a person you want to edit: ");
                 string editName = Console.ReadLine();
-                
+
 
                 foreach (var element in contactlist)
                 {
-                    if(element.FirstName==editName)                                           //(editName.ToLower() == element.FirstName.ToLower())
+                    if (element.FirstName == editName)                                           //(editName.ToLower() == element.FirstName.ToLower())
                     {
                         while (true)
                         {
@@ -333,23 +333,39 @@ namespace AddressbookProgram
             }
         }
 
-        public void Searchbystate()                                                                 //added lambda to filter out  by state
+        public void Searchbycity()                                                                 //added lambda to filter out  by state
         {
             Console.WriteLine("enter a cityname ");
 
-            string sname=Console.ReadLine();
-            var result = contactlist.Where(a => a.City.Equals(sname)).ToList() ;
+            string sname = Console.ReadLine();
+            var result = contactlist.Where(a => a.City.Equals(sname)).ToList();
 
             foreach (var element in result)
             {
                 PrintValues(element);
             }
+
+
+
+
         }
 
+        public void Searchbystate()                                                                 //added lambda to filter out  by state
+        {
+            Console.WriteLine("enter a Statename ");
+
+            string cname = Console.ReadLine();
+            var sresult = contactlist.Where(a => a.State.Equals(cname)).ToList();
+
+            foreach (var element in sresult)
+            {
+                PrintValues(element);
+            }
+
+
+        }
     }
-}   
 
-
-
+}
 
 
