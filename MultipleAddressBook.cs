@@ -80,7 +80,7 @@ namespace AddressbookProgram
                         if (duplicatecheck.Equals(null))
                         {
                         throw new Exception();
-                        obj.FirstName = name;
+                       
                     }
                         else 
                         {
@@ -196,10 +196,11 @@ namespace AddressbookProgram
             {
                 Console.Write("Enter name of a person you want to edit: ");
                 string editName = Console.ReadLine();
+                
 
-                foreach (var x in contactlist)
+                foreach (var element in contactlist)
                 {
-                    if (editName.ToLower() == x.FirstName.ToLower())
+                    if(element.FirstName==editName)                                           //(editName.ToLower() == element.FirstName.ToLower())
                     {
                         while (true)
                         {
@@ -210,32 +211,32 @@ namespace AddressbookProgram
                             {
                                 case 1:
                                     Console.WriteLine("Enter New First name");
-                                    x.FirstName = Console.ReadLine();
+                                    element.FirstName = Console.ReadLine();
                                     Console.WriteLine("***************MODIFIED****************");
                                     break;
                                 case 2:
                                     Console.WriteLine("Enter New Last name");
-                                    x.LastName = Console.ReadLine();
+                                    element.LastName = Console.ReadLine();
                                     Console.WriteLine("***************MODIFIED****************");
                                     break;
                                 case 3:
                                     Console.WriteLine("Enter New Address");
-                                    x.Address = Console.ReadLine();
+                                    element.Address = Console.ReadLine();
                                     Console.WriteLine("***************MODIFIED****************");
                                     break;
                                 case 4:
                                     Console.WriteLine("Enter New City");
-                                    x.City = Console.ReadLine();
+                                    element.City = Console.ReadLine();
                                     Console.WriteLine("***************MODIFIED****************");
                                     break;
                                 case 5:
                                     Console.WriteLine("Enter New State");
-                                    x.State = Console.ReadLine();
+                                    element.State = Console.ReadLine();
                                     Console.WriteLine("***************MODIFIED****************");
                                     break;
                                 case 6:
                                     Console.WriteLine("Enter New Zip Code");
-                                    x.Zip = Console.ReadLine();
+                                    element.Zip = Console.ReadLine();
                                     Console.WriteLine("***************MODIFIED****************");
                                     break;
                                 case 7:
@@ -246,7 +247,7 @@ namespace AddressbookProgram
                                         string phNo = Console.ReadLine();
                                         if (phNo.Length == 10)
                                         {
-                                            x.PhoneNumber = phNo;
+                                            element.PhoneNumber = phNo;
                                             Console.WriteLine("***************MODIFIED****************");
                                             break;
                                         }
@@ -264,7 +265,7 @@ namespace AddressbookProgram
                                         string emailId = Console.ReadLine();
                                         if (emailId.Contains("@"))
                                         {
-                                            x.Email = emailId;
+                                            element.Email = emailId;
                                             Console.WriteLine("***************MODIFIED****************");
                                             break;
                                         }
@@ -332,6 +333,18 @@ namespace AddressbookProgram
             }
         }
 
+        public void Searchbystate()                                                                 //added lambda to filter out  by state
+        {
+            Console.WriteLine("enter a cityname ");
+
+            string sname=Console.ReadLine();
+            var result = contactlist.Where(a => a.City.Equals(sname)).ToList() ;
+
+            foreach (var element in result)
+            {
+                PrintValues(element);
+            }
+        }
 
     }
 }   
