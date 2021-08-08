@@ -4,55 +4,85 @@ namespace AddressbookProgram
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address book Program ");
+            MultipleAddressBook objnew = new MultipleAddressBook();
 
             while (true)
             {
                 Console.WriteLine("\n Enter your choice \n 1 for Adding Contacts \n 2 for viewing Address book" +
-                    " \n 3 for editing the existing contact \n 4 for deleting contact\n 5 for  Exit");
+                    " \n 3 for editing the existing contact \n 4 for deleting contact\n 5 for  Search by city \n ^ for exit ");
 
-                int choice = int.Parse(Console.ReadLine());
-
-                switch (choice)
+                try
                 {
-                    case 1:
-                        AddAndRetrieveContact obj = new AddAndRetrieveContact();
-                        obj.EnterInput();
-                        break;
 
-
-                    case 2:
-                        AddAndRetrieveContact obj1 = new AddAndRetrieveContact();
-                        obj1.ViewTheDetails();
-                        break;
+                    int choice = int.Parse(Console.ReadLine());
+                    
 
 
 
-                    case 3:
-                        EditTheDetails obj2 = new EditTheDetails();
-                        obj2.EditUsingName();
-                        break;
 
-                    case 4:
-                        Delete obj3 = new Delete();
-                        obj3.DeletetheName();
-                        break;
-
-                    case 5:
-                        Environment.Exit(0);
-                        break;
+                    switch (choice)
+                    {
+                        case 1:
+                            objnew.AddMember();
 
 
-                    default:
-                        Console.WriteLine("Enter valid choice.");
-                        break;
+                            break;
 
-                        
+
+                        case 2:
+                            objnew.ViewContacts();
+
+                            break;
+
+
+
+                        case 3:
+                            objnew.EditDetails();
+
+                            break;
+
+                        case 4:
+
+                            objnew.DeleteDetails();
+                            break;
+
+                        case 5:
+                            objnew.Searchbystate();
+                            break;
+
+                        case 6:
+                            Environment.Exit(0);
+                            break;
+
+                       
+
+
+                        default:
+                            Console.WriteLine("Enter valid choice.");
+                            break;
+
+
+                    }
+
+
                 }
-            }
-        }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+
+
+
+
+                
+
+                
+        }   }    
     }
 }
 
