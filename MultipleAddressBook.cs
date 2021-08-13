@@ -153,7 +153,7 @@ namespace AddressbookProgram
         }
 
         //method for view Contacts
-        public  void ViewContacts()
+        public void ViewContacts()
         {
             if (AddressBookDictionary.Count > 0)
             {
@@ -363,14 +363,14 @@ namespace AddressbookProgram
             }
 
 
-        
+
         }
 
-        public  void SortEntriesAlphabetically()
+        public void SortEntriesAlphabetically()
         {
             Console.Write("Enter the name of address book you want to sort: ");
             string addressBookName = Console.ReadLine();
-        
+
 
             if (AddressBookDictionary.ContainsKey(addressBookName))
             {
@@ -381,20 +381,53 @@ namespace AddressbookProgram
             {
                 Console.WriteLine("This address book doesn't exists ");
             }
+
+
         }
 
+        public void SortByCityStateZip()
+        {
+            Console.Write("Enter the name of address book you want to sort: ");
+            string addressBookName = Console.ReadLine();
+            Console.WriteLine("\nNow enter \n1. To sort by cities \n2. To sort by State \n3. To sort by Zip-Code");
+            int choice = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            if (AddressBookDictionary.ContainsKey(addressBookName))
+            {
+                switch (choice)
+                {
+                    case 1:
+                        AddressBookDictionary[addressBookName].Sort((x, y) => x.City.CompareTo(y.City));
+                        break;
+
+                    case 2:
+                        AddressBookDictionary[addressBookName].Sort((x, y) => x.State.CompareTo(y.State));
+                        break;
+
+                    case 3:
+                        AddressBookDictionary[addressBookName].Sort((x, y) => x.Zip.CompareTo(y.Zip));
+                        break;
+
+                    default:
+                        Console.WriteLine("Please enter valid input.");
+                        break;
+                }
+
+                ViewContacts();
+            }
+            else
+            {
+                Console.WriteLine("This address book doesn't exists");
+            }
 
 
 
 
 
-    
-    
+
+        }
     }
-
-
-
-
 }
 
 
