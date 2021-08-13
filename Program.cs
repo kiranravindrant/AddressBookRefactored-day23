@@ -13,7 +13,7 @@ namespace AddressbookProgram
             while (true)
             {
                 Console.WriteLine("\n Enter your choice \n 1 for Adding Contacts \n 2 for viewing Address book" +
-                    " \n 3 for editing the existing contact \n 4 for deleting contact\n 5 for  Search by city \n 6  Search by state  \n 7  Exit \n 8  Sort A->z");
+                    " \n 3 for editing the existing contact \n 4 for deleting contact\n 5 for  Search by city \n 6  Search by state  \n 7  Exit \n 8  Sort A->z \n 9 SortByCity_state");
 
                 try
                 {
@@ -67,6 +67,10 @@ namespace AddressbookProgram
                         case 8:
                             objnew.SortEntriesAlphabetically();
                                break;
+
+                        case 9:
+                            objnew.SortByCityStateZip();
+                            break;
 
 
 
