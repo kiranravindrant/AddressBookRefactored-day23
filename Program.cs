@@ -13,7 +13,7 @@ namespace AddressbookProgram
             while (true)
             {
                 Console.WriteLine("\n Enter your choice \n 1 for Adding Contacts \n 2 for viewing Address book" +
-                    " \n 3 for editing the existing contact \n 4 for deleting contact\n 5 for  Search by city \n 6  Search by state  \n  Exit ");
+                    " \n 3 for editing the existing contact \n 4 for deleting contact\n 5 for  Search by city \n 6  Search by state  \n 7  Exit \n 8  Sort A->z");
 
                 try
                 {
@@ -58,11 +58,16 @@ namespace AddressbookProgram
                             objnew.Searchbystate();
                             break;
 
+
+                            
                         case 7:
                             Environment.Exit(0);
                             break;
 
-                       
+                        case 8:
+                            objnew.SortEntriesAlphabetically();
+                               break;
+
 
 
                         default:
