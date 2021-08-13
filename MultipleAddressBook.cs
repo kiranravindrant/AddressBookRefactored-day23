@@ -153,7 +153,7 @@ namespace AddressbookProgram
         }
 
         //method for view Contacts
-        public void ViewContacts()
+        public  void ViewContacts()
         {
             if (AddressBookDictionary.Count > 0)
             {
@@ -363,8 +363,37 @@ namespace AddressbookProgram
             }
 
 
+        
         }
+
+        public  void SortEntriesAlphabetically()
+        {
+            Console.Write("Enter the name of address book you want to sort: ");
+            string addressBookName = Console.ReadLine();
+        
+
+            if (AddressBookDictionary.ContainsKey(addressBookName))
+            {
+                AddressBookDictionary[addressBookName].Sort((x, y) => x.FirstName.CompareTo(y.FirstName));
+                ViewContacts();
+            }
+            else
+            {
+                Console.WriteLine("This address book doesn't exists ");
+            }
+        }
+
+
+
+
+
+
+    
+    
     }
+
+
+
 
 }
 
