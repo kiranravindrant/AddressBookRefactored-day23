@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CxjP4TJtI7hUCmw8FCTveK5yoCSepl7yCzblzIw2tpzoT+EXwsqVSUFBa5WNAg2zHTJQ37TlT7azWYL9n6bAog==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\Addressbook\\AddressbookProgram.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

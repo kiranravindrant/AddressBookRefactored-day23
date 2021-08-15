@@ -1,0 +1,15 @@
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\AddressbookProgram.exe
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\AddressbookProgram.deps.json
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\AddressbookProgram.runtimeconfig.json
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\AddressbookProgram.runtimeconfig.dev.json
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\AddressbookProgram.dll
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\AddressbookProgram.pdb
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\AddressbookProgram.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\AddressbookProgram.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\AddressbookProgram.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\AddressbookProgram.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\AddressbookProgram.dll
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\AddressbookProgram.pdb
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\AddressbookProgram.genruntimeconfig.cache
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\AddressbookProgram.csproj.CopyComplete

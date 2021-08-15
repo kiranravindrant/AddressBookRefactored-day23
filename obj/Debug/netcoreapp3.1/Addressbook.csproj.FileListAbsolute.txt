@@ -1,0 +1,13 @@
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\Addressbook.exe
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\Addressbook.deps.json
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\Addressbook.runtimeconfig.json
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\Addressbook.runtimeconfig.dev.json
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\Addressbook.dll
+C:\Users\LENOVO\source\repos\Addressbook\bin\Debug\netcoreapp3.1\Addressbook.pdb
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\Addressbook.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\Addressbook.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\Addressbook.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\Addressbook.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\Addressbook.dll
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\Addressbook.pdb
+C:\Users\LENOVO\source\repos\Addressbook\obj\Debug\netcoreapp3.1\Addressbook.genruntimeconfig.cache
