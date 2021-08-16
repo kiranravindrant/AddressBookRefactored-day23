@@ -10,9 +10,9 @@ namespace AddressbookProgram
 {
     public class ToJson
     {
-        public static void JsonWrite()
+        public static void JsonWrite()      
         {
-            string strResultJson = JsonConvert.SerializeObject(MultipleAddressBook.AddressBookDictionary);
+            string strResultJson = JsonConvert.SerializeObject(MultipleAddressBook.AddressBookDictionary);  //passing dictionary to serialize oject func
             File.WriteAllText(@"AddressBook.json", strResultJson);
             Console.WriteLine("Stored");
 
